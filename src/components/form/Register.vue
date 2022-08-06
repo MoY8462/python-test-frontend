@@ -1,5 +1,5 @@
 <script setup>
-const loginHandler =  () => {
+const registerHandler =  () => {
     
 }
 </script>
@@ -10,10 +10,21 @@ const loginHandler =  () => {
             <FormKit
                 type="form"
                 submit-label="Entrar"
-                @submit="loginHandler"
+                @submit="registerHandler"
                 :incomplete-message="false"
             >
-                <h3>Inicio de sesión</h3>
+                <h3>Registro</h3>
+                <FormKit
+                    type="text"
+                    name="carrer"
+                    label="Nombre de Usuario"
+                    validation="required|alphanumeric"
+                    :validation-messages="{
+                        required: 'El nombre de usuario es requerido',
+                        alphanumeric: 'Sólo números y letras',
+                    }"
+                    placeholder="Ingresar nombre de usuario"
+                />
                 <FormKit
                     type="email"
                     name="email"
@@ -39,7 +50,7 @@ const loginHandler =  () => {
         </div>
         <div class="form-footer underline">
             <router-link  to="/">Inicio</router-link>
-            <router-link to="/register">Registrar</router-link>
+            <router-link to="/login">Iniciar sesión</router-link>
         </div>
     </div>
 </template>

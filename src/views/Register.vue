@@ -1,3 +1,9 @@
+<script setup>
+import Register from '@containerComponents/Register.vue'
+</script>
+
 <template>
-    <h1>Register</h1>
+    <div class="screen_full content_center">
+        <Register />
+    </div>
 </template>
