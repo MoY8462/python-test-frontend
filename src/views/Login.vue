@@ -1,3 +1,9 @@
+<script setup>
+import Login from '@containerComponents/Login.vue'
+</script>
+
 <template>
-    <h1>Login</h1>
+    <div class="screen_full content_center">
+        <Login />
+    </div>
 </template>
