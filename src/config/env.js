@@ -1,0 +1,1 @@
+export const JWT_TOKEN = '63aa3e92-c3fe-4010-bd5e-bc3e38e91d5e'

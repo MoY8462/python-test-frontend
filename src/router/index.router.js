@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -18,14 +19,30 @@ const router = createRouter({
             name: 'Home',
             component: () => import('@views/Dashboard.vue'),
             
+            
         },
     ],
 })
 
-/**
- * @function
- * @description On error in router, log error with custom logger.
- * @param error Error message. */
+function existToken() {
+    return localStorage.token;
+}
 
+
+router.beforeEach((to, from, next) => {
+    if (to.path === '/' && !existToken()) {
+        next('/login')
+    }
+    else if (to.path === '/login' && existToken()) {
+        next('/')
+    }
+    else if(to.path === '/register' && existToken()){
+        next('/')
+    }
+    else {
+        next()
+    }
+
+  });
 
 export default router

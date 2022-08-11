@@ -7,7 +7,7 @@ module.exports = plugin(function ({ addBase, theme }) {
         },
         '#app': {
             width: '100%',
-            color: theme('colors.primary'),
+            color: theme('colors.yellow-500'),
         },
     })
 })

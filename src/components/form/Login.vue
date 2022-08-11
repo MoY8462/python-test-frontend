@@ -1,5 +1,22 @@
 <script setup>
-const loginHandler =  () => {
+import axios from 'axios'
+import router from '@router/index.router'
+
+/**
+ * @function
+ * @description Login authentication handler.
+ * @param credentials Email and password. */
+
+const loginHandler = async (credentials) => {
+    const token = await axios.post('http://127.0.0.1:8000/api/user/', credentials)
+                    .then(({data}) => data.token)
+                    .catch(err => console.log(err)) 
+    console.log(token)
+    if(token){
+        localStorage.setItem('token', token)
+        router.push('/')
+    }
+    
     
 }
 </script>

@@ -59,7 +59,7 @@ module.exports = {
         require('./src/theme/base/typography.base'),
 
         require('./src/theme/components/form.component'),
-        
+        require('./src/theme/components/dasboard.component'),
 
         require('./src/theme/utils/layout.util'),
     ],

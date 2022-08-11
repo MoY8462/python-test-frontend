@@ -28,6 +28,13 @@ module.exports = plugin(function ({ addComponents, theme }) {
                     margin: '0 24px',
                 },
             },
+            '.boton': {
+                marginTop: '15px',
+                fontWeight: '600',
+                '& :hover': {
+                    textDecoration: 'underline'
+                }
+            }
         },
     })
 })

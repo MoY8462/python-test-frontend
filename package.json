@@ -10,12 +10,16 @@
   "dependencies": {
     "@formkit/themes": "1.0.0-beta.8",
     "@formkit/vue": "1.0.0-beta.10",
+    "axios": "0.27.2",
+    "node-fetch": "^3.2.10",
     "vue": "^3.2.37",
     "vue-router": "4.0.16"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",
     "autoprefixer": "^10.4.8",
+    "jsonwebtoken-esm": "1.0.3",
+    "miragejs": "^0.1.45",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.8",
     "vite": "^3.0.0"

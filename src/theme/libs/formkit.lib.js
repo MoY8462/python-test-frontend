@@ -19,6 +19,6 @@ export default {
         outer:  'h-[79px]',
     },
     submit: { 
-        input: ' text-white font-bold bg-blue-500 hover:bg-blue-700'
+        input: ' text-white font-bold bg-yellow-500 hover:bg-yellow-700'
     }
 }

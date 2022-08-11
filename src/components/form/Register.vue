@@ -1,5 +1,19 @@
 <script setup>
-const registerHandler =  () => {
+import axios from 'axios'
+import router from '@router/index.router'
+
+/**
+ * @function
+ * @description Login authentication handler.
+ * @param credentials Email and password. */
+
+const registerHandler = async (credentials) => {
+    const data = await axios.post('http://127.0.0.1:8000/api/user/', credentials)
+                    .then(({data}) => data.message)
+                    .catch(err => console.log(err)) 
+    console.log(data)
+    router.push('/login')
+    
     
 }
 </script>
@@ -16,7 +30,7 @@ const registerHandler =  () => {
                 <h3>Registro</h3>
                 <FormKit
                     type="text"
-                    name="carrer"
+                    name="name"
                     label="Nombre de Usuario"
                     validation="required|alphanumeric"
                     :validation-messages="{
