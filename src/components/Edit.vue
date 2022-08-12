@@ -16,12 +16,10 @@ const props = defineProps({
             }
         }
     },
-    state: null,
-    title: String,
 })
 
-const { id, title} = toRefs(props)
-let {  restaurant, state } = toRefs(props)
+const { id } = toRefs(props)
+let {  restaurant } = toRefs(props)
 
 onMounted (  () => {
     
@@ -32,7 +30,7 @@ const emit = defineEmits(['change', 'back'])
 
 const editHandler = (credentials) => {
     console.log(credentials)
-    axios.put('http://127.0.0.1:8000/api/restaurant/',credentials)
+    axios.put('http://127.0.0.1:8000/api/restaurant/'+props.id,credentials)
         .then(data => data)
 }
 
@@ -41,6 +39,7 @@ const editHandler = (credentials) => {
 <template>
     <div>
         <div class="form">
+            {{restaurant}}
             <div class="form-content">
                 <FormKit
                     type="form"

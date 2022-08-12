@@ -23,7 +23,7 @@ const registerHandler = async (credentials) => {
         <div class="form-content">
             <FormKit
                 type="form"
-                submit-label="Entrar"
+                submit-label="Registrar"
                 @submit="registerHandler"
                 :incomplete-message="false"
             >
@@ -63,7 +63,6 @@ const registerHandler = async (credentials) => {
             </FormKit>
         </div>
         <div class="form-footer underline">
-            <router-link  to="/">Inicio</router-link>
             <router-link to="/login">Iniciar sesión</router-link>
         </div>
     </div>

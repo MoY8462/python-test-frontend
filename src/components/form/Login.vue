@@ -15,6 +15,7 @@ const loginHandler = async (credentials) => {
     if(token){
         localStorage.setItem('token', token)
         router.push('/')
+        location.reload()
     }
     
     
@@ -55,7 +56,6 @@ const loginHandler = async (credentials) => {
             </FormKit>
         </div>
         <div class="form-footer underline">
-            <router-link  to="/">Inicio</router-link>
             <router-link to="/register">Registrar</router-link>
         </div>
     </div>

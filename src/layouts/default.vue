@@ -9,6 +9,7 @@ const token = localStorage.getItem('token')
 const out = (credentials) => {
     localStorage.removeItem('token')
     const token = localStorage.getItem('token')
+    location.reload()
 }
 
 
